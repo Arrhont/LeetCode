@@ -42,7 +42,7 @@ function supaDupaFastMedianFind(arrayA, arrayB) {
                         ? bNextToEdge
                         : bElementsInHalf === arrayB.length
                         ? aNextToEdge
-                        : Math.max(aNextToEdge, bNextToEdge);
+                        : Math.min(aNextToEdge, bNextToEdge);
 
                 return (leftHalfEnd + rightHalfStart) / 2;
             }
@@ -63,7 +63,7 @@ function getElementFromArray(elementInArray, array) {
 }
 
 const a = [1, 2];
-const b = [3, 4];
+const b = [-1, 3];
 
 console.log(supaDupaFastMedianFind(a, b));
 const c = a.concat(b);
